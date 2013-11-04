@@ -15,7 +15,7 @@
         "symfony/framework-bundle": "*",
         "symfony/dependency-injection": "*",
         "symfony/process": "*",
-        "symfony/twig-bundle": "*",
+        "symfony/twig-bundle": "*"
     },
     "autoload": {
         "psr-0": { "Ivan1986\\SupervisorBundle": "" }
