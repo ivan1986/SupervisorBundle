@@ -1,6 +1,9 @@
 Supervisor Control Bundle
 =========================
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/511fa5e9-1c95-4cb6-8e2f-4a8ed619e3ac/small.png)](https://insight.sensiolabs.com/projects/511fa5e9-1c95-4cb6-8e2f-4a8ed619e3ac)
+
+
 This bundle for quick configure and usage separate instance of [supervisord](http://supervisord.org/).
 
 All Symfony2 commands run supervisor from kernel.root_dir path.
