@@ -6,6 +6,10 @@ This bundle for quick configure and usage separate instance of [supervisord](htt
 All Symfony2 commands run supervisor from kernel.root_dir path.
 If use config created by supervisor:init use [local configure file](http://supervisord.org/configuration.html).
 
+install default by composer:
+
+    "ivan1986/supervisor": "*",
+
 Bundle has commands:
 
   * supervisor:init
