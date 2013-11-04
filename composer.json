@@ -12,10 +12,10 @@
         }
     ],
     "require": {
-        "symfony/framework-bundle": "*",
-        "symfony/dependency-injection": "*",
-        "symfony/process": "*",
-        "symfony/twig-bundle": "*"
+        "symfony/framework-bundle": "~2.1",
+        "symfony/dependency-injection": "~2.1",
+        "symfony/process": "~2.1",
+        "symfony/twig-bundle": "~2.1"
     },
     "autoload": {
         "psr-0": { "Ivan1986\\SupervisorBundle": "" }
