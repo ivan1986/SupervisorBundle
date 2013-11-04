@@ -3,6 +3,8 @@ Supervisor Control Bundle
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/511fa5e9-1c95-4cb6-8e2f-4a8ed619e3ac/small.png)](https://insight.sensiolabs.com/projects/511fa5e9-1c95-4cb6-8e2f-4a8ed619e3ac)
 
+[![knpbundles.com](http://knpbundles.com/ivan1986/SupervisorBundle/badge)](http://knpbundles.com/ivan1986/SupervisorBundle)
+
 
 This bundle for quick configure and usage separate instance of [supervisord](http://supervisord.org/).
 
