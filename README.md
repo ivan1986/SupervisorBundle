@@ -22,4 +22,14 @@ Bundle has commands:
   * supervisor:gen
     - generate simple programm section for symfony2 console command
 
+Example code for rabbitmq scale workers.
+
+    $this->get('supervisor')->genProgrammConf('worker', array(
+        'name' => 'worker',
+        'command' => 'rabbitmq:consumer sender',
+        'numprocs' => $this->getNeedWorkersCount(),
+    ));
+    $this->get('supervisor')->run();
+    $this->get('supervisor')->reloadAndUpdate();
+
 Service supervisor may run daemon, execute any command, and generate files for supervisord.
