@@ -11,6 +11,8 @@
     <services>
         <service id="ivan1986_supervisor.supervisor_service" class="%ivan1986_supervisor.supervisor_service.class%">
             <argument type="service" id="templating" />
+            <argument>%kernel.root_dir%</argument>
         </service>
+        <service id="supervisor" alias="ivan1986_supervisor.supervisor_service" />
     </services>
 </container>

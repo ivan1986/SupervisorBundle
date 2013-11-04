@@ -1,0 +1,7 @@
+[program:{{ name }}]
+command={% block cmd %}php console {{ command }}{% endblock cmd %}
+
+process_name=%(program_name)s%(process_num)02d
+numprocs={{ numprocs|default('1') }}
+{% block options %}
+{% endblock options %}

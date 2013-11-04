@@ -12,8 +12,7 @@ class InitCommand extends ContainerAwareCommand {
     {
         $this
             ->setName('supervisor:init')
-            //->addArgument('all', InputArgument::OPTIONAL, 'All recheck')
-            ->setDescription('Create base config files for run supervisor')
+            ->setDescription('Create base config files for run local supervisor')
         ;
     }
 
@@ -23,7 +22,7 @@ class InitCommand extends ContainerAwareCommand {
 
         ));
         file_put_contents($this->getContainer()->getParameter('kernel.root_dir').'/supervisord.conf', $conf);
+        mkdir($this->getContainer()->getParameter('kernel.root_dir').'/supervisor');
     }
-
 
 } 
