@@ -30,5 +30,4 @@ class GenCommand extends ContainerAwareCommand
             'numprocs' => $input->getOption('count')?:null,
         ));
     }
-
 }

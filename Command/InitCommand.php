@@ -24,5 +24,4 @@ class InitCommand extends ContainerAwareCommand
         file_put_contents($this->getContainer()->getParameter('kernel.root_dir').'/supervisord.conf', $conf);
         mkdir($this->getContainer()->getParameter('kernel.root_dir').'/supervisor');
     }
-
 }
