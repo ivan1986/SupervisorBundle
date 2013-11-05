@@ -15,7 +15,7 @@ class GenCommand extends ContainerAwareCommand
         $this
             ->setName('supervisor:gen')
             ->addArgument('name', InputArgument::REQUIRED, 'Programm name')
-            ->addArgument('cmd', InputArgument::REQUIRED, 'Symfony command')
+            ->addArgument('cmd', InputArgument::IS_ARRAY, 'Symfony command')
             ->addOption('count', null, InputOption::VALUE_OPTIONAL, 'numproc')
             ->setDescription('run supervisor instance')
         ;
@@ -26,7 +26,7 @@ class GenCommand extends ContainerAwareCommand
         $supervisor = $this->getContainer()->get('ivan1986_supervisor.supervisor_service');
         $supervisor->genProgrammConf($input->getArgument('name'), array(
             'name' => $input->getArgument('name'),
-            'command' => $input->getArgument('cmd'),
+            'command' => join(' ', $input->getArgument('cmd')),
             'numprocs' => $input->getOption('count')?:null,
         ));
     }
