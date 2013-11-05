@@ -6,8 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class InitCommand extends ContainerAwareCommand {
-
+class InitCommand extends ContainerAwareCommand
+{
     protected function configure()
     {
         $this
@@ -25,4 +25,4 @@ class InitCommand extends ContainerAwareCommand {
         mkdir($this->getContainer()->getParameter('kernel.root_dir').'/supervisor');
     }
 
-} 
+}

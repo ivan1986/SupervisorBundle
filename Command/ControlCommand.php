@@ -7,8 +7,8 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class ControlCommand extends ContainerAwareCommand {
-
+class ControlCommand extends ContainerAwareCommand
+{
     protected function configure()
     {
         $this
@@ -21,7 +21,7 @@ class ControlCommand extends ContainerAwareCommand {
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $result = $this->getContainer()->get('ivan1986_supervisor.supervisor_service')
-            ->execute(join(' ',$input->getArgument('cmd')));
+            ->execute(join(' ', $input->getArgument('cmd')));
         echo $result->getOutput();
     }
 }

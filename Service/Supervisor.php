@@ -5,8 +5,8 @@ namespace Ivan1986\SupervisorBundle\Service;
 use Symfony\Bundle\TwigBundle\TwigEngine;
 use Symfony\Component\Process\Process;
 
-class Supervisor {
-
+class Supervisor
+{
     /** @var TwigEngine */
     protected $templating;
     private $appDir;
@@ -61,8 +61,7 @@ class Supervisor {
     public function run()
     {
         $result = $this->execute('status');
-        if (strpos($result->getOutput(), 'sock no such file'))
-        {
+        if (strpos($result->getOutput(), 'sock no such file')) {
             $p = new Process('supervisord');
             $p->setWorkingDirectory($this->appDir);
             $p->run();
