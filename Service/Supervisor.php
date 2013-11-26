@@ -60,8 +60,8 @@ class Supervisor
      */
     public function run()
     {
-        $result = $this->execute('status');
-        if (strpos($result->getOutput(), 'sock no such file')) {
+        $result = $this->execute('status')->getOutput();
+        if (strpos($result, 'sock no such file') || strpos($result, 'refused connection')) {
             $p = new Process('supervisord');
             $p->setWorkingDirectory($this->appDir);
             $p->run();
