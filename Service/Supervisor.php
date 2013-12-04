@@ -10,11 +10,13 @@ class Supervisor
     /** @var TwigEngine */
     protected $templating;
     private $appDir;
+    private $name;
 
-    public function __construct($templating, $appDir)
+    public function __construct($templating, $appDir, $name)
     {
         $this->templating = $templating;
         $this->appDir = $appDir;
+        $this->name = $name ? (' -i '.$name) : '';
     }
 
     /**
@@ -62,7 +64,7 @@ class Supervisor
     {
         $result = $this->execute('status')->getOutput();
         if (strpos($result, 'sock no such file') || strpos($result, 'refused connection')) {
-            $p = new Process('supervisord');
+            $p = new Process('supervisord'.$this->name);
             $p->setWorkingDirectory($this->appDir);
             $p->run();
         }

@@ -6,12 +6,14 @@
 
     <parameters>
         <parameter key="ivan1986_supervisor.supervisor_service.class">Ivan1986\SupervisorBundle\Service\Supervisor</parameter>
+        <parameter key="ivan1986_supervisor.supervisor_service.name">symfony2</parameter>
     </parameters>
 
     <services>
         <service id="ivan1986_supervisor.supervisor_service" class="%ivan1986_supervisor.supervisor_service.class%">
             <argument type="service" id="templating" />
             <argument>%kernel.root_dir%</argument>
+            <argument>%ivan1986_supervisor.supervisor_service.name%</argument>
         </service>
         <service id="supervisor" alias="ivan1986_supervisor.supervisor_service" />
     </services>

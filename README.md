@@ -43,3 +43,6 @@ Example code for rabbitmq scale workers.
     $this->get('supervisor')->reloadAndUpdate();
 
 Service supervisor may run daemon, execute any command, and generate files for supervisord.
+
+Also supervisord run whis `-i`, configured by parameter. Whisout this list of
+`/usr/bin/python /usr/bin/supervisord` in process list - great looking :)
