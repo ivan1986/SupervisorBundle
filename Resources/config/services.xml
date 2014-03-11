@@ -6,7 +6,6 @@
 
     <parameters>
         <parameter key="ivan1986_supervisor.supervisor_service.class">Ivan1986\SupervisorBundle\Service\Supervisor</parameter>
-        <parameter key="ivan1986_supervisor.supervisor_service.name">symfony2</parameter>
     </parameters>
 
     <services>

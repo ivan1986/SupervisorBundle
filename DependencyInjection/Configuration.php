@@ -13,6 +13,10 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
+        $rootNode = $treeBuilder->root('supervisor');
+        $rootNode->children()
+                ->scalarNode('name')->defaultValue('symfony2')->end()
+            ->end();
         return $treeBuilder;
     }
 }
