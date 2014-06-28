@@ -44,5 +44,5 @@ Example code for rabbitmq scale workers.
 
 Service supervisor may run daemon, execute any command, and generate files for supervisord.
 
-Also supervisord run whis `-i`, configured by parameter. Whisout this list of
+Also supervisord run with `-i`, configured by parameter. Without this list of
 `/usr/bin/python /usr/bin/supervisord` in process list - great looking :)
