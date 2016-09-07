@@ -12,13 +12,12 @@
         }
     ],
     "require": {
-        "symfony/framework-bundle": "~2.1",
-        "symfony/dependency-injection": "~2.1",
-        "symfony/process": "~2.1",
-        "symfony/twig-bundle": "~2.1"
+        "symfony/framework-bundle": "~2.1|~3.0",
+        "symfony/dependency-injection": "~2.1|~3.0",
+        "symfony/process": "~2.1|~3.0",
+        "symfony/twig-bundle": "~2.1|~3.0"
     },
     "autoload": {
-        "psr-0": { "Ivan1986\\SupervisorBundle": "" }
-    },
-    "target-dir": "Ivan1986/SupervisorBundle"
+        "psr-4": { "Ivan1986\\SupervisorBundle\\": "" }
+    }
 }
