@@ -36,7 +36,7 @@ class Supervisor
     /**
      * Выполняет команду супервизора
      *
-     * @param $cmd string supervisorctl command
+     * @param string $cmd string supervisorctl command
      * @return Process Завершенный процесс
      */
     public function execute($cmd)
